@@ -26,7 +26,9 @@ const App: React.FC = () => {
       </div>
       <PieChart />
     </div>
+
     <Chart/>
+    <h1  className='maintext'>Map View</h1>
     <Map/>
   </div>
   
