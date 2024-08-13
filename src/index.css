@@ -25,4 +25,8 @@ select {
     font-size: 14px;
     color: #333;
   }
-  
+  .maintext{
+    display:flex;
+justify-content:center;
+align-items: center;
+  }

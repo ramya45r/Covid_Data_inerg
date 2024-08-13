@@ -4,9 +4,9 @@ import { fetchCovidData } from './redux/covidSlice';
 import Filter from './components/Filter';
 import Summary from './components/Summary';
 import PieChart from './components/PieChart';
-import LineChart from './components/LineChart';
-import MapView from './components/MapView';
 import { AppDispatch } from './redux/store';
+import Chart from './components/Chart';
+import Map from './components/Map';
 
 const App: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>(); 
@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-    <h1>COVID-19 India</h1>
+    <h1  className='maintext'>COVID India</h1>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
       <div>
       <Filter />
@@ -26,8 +26,8 @@ const App: React.FC = () => {
       </div>
       <PieChart />
     </div>
-    <LineChart />
-    <MapView />
+    <Chart/>
+    <Map/>
   </div>
   
   );

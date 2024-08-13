@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { LatLngExpression } from "leaflet";
 
-const MapView: React.FC = () => {
+const Map: React.FC = () => {
   const { selectedState, stateData } = useSelector(
     (state: RootState) => state.covid
   );
@@ -37,11 +37,11 @@ const MapView: React.FC = () => {
           </p>
           <p>
             <strong>Deaths:</strong> {deceased}
-          </p>{" "}
+          </p>
         </Popup>
       </Marker>
     </MapContainer>
   );
 };
 
-export default MapView;
+export default Map;

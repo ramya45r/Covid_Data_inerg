@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { ScatterData } from 'plotly.js';
 
-const LineChart: React.FC = () => {
+const Chart: React.FC = () => {
   const { selectedState, stateData } = useSelector(
     (state: RootState) => state.covid
   );
@@ -31,9 +31,9 @@ const LineChart: React.FC = () => {
   return (
     <Plot
       data={data}
-      layout={{ title: `COVID-19 Cases in ${selectedState}` }}
+      layout={{ title: `COVID Cases in ${selectedState}` }}
     />
   );
 };
 
-export default LineChart;
+export default Chart;
