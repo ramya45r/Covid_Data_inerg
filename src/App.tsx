@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCovidData } from "./redux/covidSlice";
 import Filter from "./components/Filter";
-import Summary from "./components/Summary";
 import PieChart from "./components/PieChart";
 import { AppDispatch } from "./redux/store";
 import Chart from "./components/Chart";
 import Map from "./components/Map";
+import List from "./components/List";
 
 const App: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -27,7 +27,7 @@ const App: React.FC = () => {
       >
         <div>
           <Filter />
-          <Summary />
+          <List />
         </div>
         <PieChart />
       </div>

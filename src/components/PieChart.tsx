@@ -24,7 +24,7 @@ const PieChart: React.FC = () => {
   return (
     <Plot
       data={[data]}
-      layout={{ title: 'COVID-19 Cases Distribution' }}
+      layout={{ title: 'COVID Pie Diagram' }}
     />
   );
 };

@@ -7,25 +7,15 @@ import axios from "axios";
 const Filter: React.FC = () => {
   const dispatch = useDispatch();
   const stateData = useSelector((state: RootState) => state.covid.stateData);
+console.log(stateData,'stateData');
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setSelectedState(e.target.value));
   };
-  useEffect(() => {
-    const fetchdata = async () => {
-      try {
-        const response = await axios.get(
-          "https://data.covid19india.org/v4/min/data.min.json"
-        );
-        console.log(response.data, "response");
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchdata();
-  }, []);
+
 
   return (
+    <div>
     <select onChange={handleChange}>
       <option value="">Select State</option>
       {Object.keys(stateData).map((stateCode) => (
@@ -34,6 +24,8 @@ const Filter: React.FC = () => {
         </option>
       ))}
     </select>
+
+    </div>
   );
 };
 

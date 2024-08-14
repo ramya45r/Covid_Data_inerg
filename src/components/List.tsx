@@ -2,16 +2,17 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
-const Summary: React.FC = () => {
+const List: React.FC = () => {
   const { totalCases, activeCases, recovered, deaths, selectedState, stateData } = useSelector(
     (state: RootState) => state.covid
   );
 
   const stateSummary = selectedState ? stateData[selectedState].total : null;
+console.log(stateSummary,'stateSummary');
 
   return (
     <div>
-      <h2>COVID-19 Summary</h2>
+      <h2>COVID Summary</h2>
       <p>State:{selectedState}</p>
       <p>Total Cases: {stateSummary ? stateSummary.confirmed : totalCases}</p>
       <p>Active Cases: {stateSummary ? stateSummary.confirmed - stateSummary.recovered - stateSummary.deceased : activeCases}</p>
@@ -21,4 +22,4 @@ const Summary: React.FC = () => {
   );
 };
 
-export default Summary;
+export default List;

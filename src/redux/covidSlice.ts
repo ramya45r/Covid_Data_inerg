@@ -27,6 +27,8 @@ export const fetchCovidData = createAsyncThunk(
   'covid/CovidData',
   async () => {
     const response = await axios.get('https://data.covid19india.org/v4/min/data.min.json');
+    console.log(response.data,'data');
+    
     return response.data;
   }
 );
