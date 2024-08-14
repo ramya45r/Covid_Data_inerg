@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { setSelectedState } from "../redux/covidSlice";
-import axios from "axios";
 
 const Filter: React.FC = () => {
   const dispatch = useDispatch();
